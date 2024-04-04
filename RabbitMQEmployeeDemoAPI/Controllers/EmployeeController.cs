@@ -2,11 +2,13 @@
 using RabbitMQEmployeeDemoAPI.RabitMQ;
 using RabbitMQEmployeeDemoAPI.Services;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Authorization;
 
 namespace RabbitMQEmployeeDemoAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class EmployeeController : ControllerBase
     {
         private readonly IEmployeeService _employeeService;
